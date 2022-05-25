@@ -12,8 +12,8 @@ const app = new Vue({
         mySearch() {
             this.getData(this.selectedGenre);
         },
-        getData(genre = null) {
-            if (genre) {
+        getData(startGetData = null) {
+            if (startGetData) {
                 this.path = `${this.apiPath}?genre=${this.selectedGenre}`;
             } else {
                 this.path = `${this.apiPath}`;
