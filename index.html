@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,12 +17,23 @@
   </head>
   <body>
     <div id="app">
-      <header>
-        <img src="./img/1.png" alt="Logo" class="mx-2 my-1" />
+      <header class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <img src="./img/1.png" alt="Logo" class="my-1" />
+            </div>
+            <div class="col-10">
+            <div class="select-container mt-1">
+                <select class="form-select" @change="mySearch" v-model="selectedGenre">
+              <option selected value="">All</option>
+                <option v-for="(genere, index) in valueForSelect" :key="index" :value="genere">{{genere}}</option>
+            </select>
+            </div>
+        </div>
       </header>
       <main>
         <div class="wrapper">
-          <div class="container pt-3">
+          <div class="container mt-3">
             <div class="row row-cols-5">
               <div class="col" v-for="(disco, index) in dischi" :key="index">
                 <div class="card text-center my-2">

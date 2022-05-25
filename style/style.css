@@ -26,6 +26,16 @@ main {
   width: 70%;
   margin: 0 auto;
 }
+.select-container {
+  width: 200px;
+  margin: 0 auto;
+}
+.form-select {
+  width: inherit;
+}
+.row {
+  margin-left: 20px;
+}
 .card {
   height: 300px;
   width: 150px;
