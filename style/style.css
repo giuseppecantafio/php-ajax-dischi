@@ -1,6 +1,7 @@
 /* GENERAL RULES */
 
 body {
+  min-width: 1500px;
   background-color: #1e2d3b;
 }
 
@@ -26,7 +27,7 @@ main {
   margin: 0 auto;
 }
 .card {
-  height: 270px;
+  height: 300px;
   width: 150px;
   display: block !important;
   border-radius: 0 !important;
@@ -45,4 +46,11 @@ h4 {
 p {
   color: gray;
   font-size: 0.8rem;
+}
+.main-text-container {
+  height: 130px;
+}
+.fancy-text {
+  color: wheat;
+  font-size: 0.5rem;
 }
