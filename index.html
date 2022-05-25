@@ -16,22 +16,33 @@
     <title>Php Ajax Dischi</title>
   </head>
   <body>
-    <header>
-      <img src="./img/1.png" alt="Logo" class="mx-2 my-1" />
-    </header>
-    <main>
-      <div class="wrapper">
-        <div class="container pt-3">
-          <div class="row row-cols-5">
-            <div class="card text-center my-2">
-              <img src="..." class="card-img-top img-fluid my-4" alt="..." />
-              <h4>TITOLO</h4>
-              <p>AUTORE<br />ANNO</p>
+    <div id="app">
+      <header>
+        <img src="./img/1.png" alt="Logo" class="mx-2 my-1" />
+      </header>
+      <main>
+        <div class="wrapper">
+          <div class="container pt-3">
+            <div class="row row-cols-5">
+              <div class="col" v-for="(disco, index) in dischi" :key="index">
+                <div class="card text-center my-2">
+                  <img
+                    :src="disco.poster"
+                    class="card-img-top img-fluid my-4"
+                    :alt="disco.author"
+                  />
+                  <div class="main-text-container">
+                    <h4>{{disco.title}}</h4>
+                    <p>{{disco.author}}<br />{{disco.year}}</p>
+                  </div>
+                  <p class="fancy-text">{{disco.genre}}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
     <script src="script/script.js"></script>
   </body>
 </html>
