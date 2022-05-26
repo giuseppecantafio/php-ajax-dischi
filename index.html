@@ -35,6 +35,9 @@
         <div class="wrapper">
           <div class="container mt-3">
             <div class="row row-cols-5">
+                <div v-if="loader" class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
               <div class="col" v-for="(disco, index) in dischi" :key="index">
                 <div class="card text-center my-2">
                   <img
